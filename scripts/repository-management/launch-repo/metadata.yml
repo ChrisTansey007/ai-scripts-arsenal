@@ -1,0 +1,203 @@
+name: "Launch Repository"
+version: "1.0.0"
+category: "repository-management"
+description: "Initialize git, create GitHub repo, and push automatically in one command"
+
+platforms:
+  - windows
+  - macos
+  - linux
+
+languages:
+  - powershell
+  - bash
+
+files:
+  powershell: "launch.ps1"
+  bash: "launch.sh"
+  readme: "README.md"
+
+prerequisites:
+  required:
+    - name: "git"
+      version: ">= 2.0"
+      check_command: "git --version"
+      install_url: "https://git-scm.com/downloads"
+  optional:
+    - name: "gh-cli"
+      version: ">= 2.0"
+      check_command: "gh --version"
+      install_url: "https://cli.github.com/"
+      note: "Without GitHub CLI, manual steps are provided"
+
+ai_usage:
+  when_to_use:
+    - "User wants to create new GitHub repository"
+    - "Need to initialize git and push to remote"
+    - "After generating a new project structure"
+    - "Setting up fresh codebase on GitHub"
+    - "Automating repository creation in workflows"
+  
+  when_not_to_use:
+    - "Repository already exists on GitHub"
+    - "Working in a subdirectory of existing repo"
+    - "Need to push to non-GitHub remote"
+  
+  inputs:
+    - name: "repository_name"
+      type: "string"
+      required: true
+      source: "derived from folder name"
+      description: "Name of the GitHub repository to create"
+    
+    - name: "description"
+      type: "string"
+      required: true
+      source: "hardcoded in script (customizable)"
+      description: "Repository description"
+    
+    - name: "visibility"
+      type: "enum"
+      required: true
+      values: ["public", "private"]
+      source: "interactive prompt"
+      description: "Repository visibility setting"
+  
+  outputs:
+    - name: "repository_url"
+      type: "string"
+      description: "URL of created GitHub repository"
+      example: "https://github.com/username/repo-name"
+    
+    - name: "git_status"
+      type: "string"
+      description: "Git remote tracking status"
+    
+    - name: "exit_code"
+      type: "integer"
+      description: "0 for success, 1 for failure"
+  
+  behavior:
+    idempotent: true
+    idempotency_check: "Checks if .git directory exists and skips init if present"
+    safe_to_retry: true
+    side_effects:
+      - "Creates .git directory"
+      - "Creates GitHub repository"
+      - "Sets up git remote 'origin'"
+      - "Pushes all files to GitHub"
+
+estimated_time: "1-2 minutes"
+complexity: "simple"
+
+tags:
+  - git
+  - github
+  - automation
+  - repository
+  - ci-cd
+  - devops
+
+related_scripts:
+  before:
+    - category: "project-initialization"
+      scripts: ["react-typescript-tailwind", "python-fastapi", "nextjs-starter"]
+  after:
+    - category: "deployment"
+      scripts: ["vercel-deploy", "netlify-deploy"]
+    - category: "devops"
+      scripts: ["github-actions-ci"]
+  similar:
+    - category: "repository-management"
+      scripts: ["fork-sync", "branch-manager"]
+
+examples:
+  - title: "Create public repository for React app"
+    command: "./launch.sh"
+    working_directory: "/path/to/my-react-app"
+    interaction:
+      - prompt: "Choose repository visibility"
+        response: "1 (Public)"
+    expected_output: "https://github.com/username/my-react-app"
+    
+  - title: "Create private repository"
+    command: ".\\launch.ps1"
+    working_directory: "C:\\projects\\secret-project"
+    interaction:
+      - prompt: "Choose repository visibility"
+        response: "2 (Private)"
+    expected_output: "Repository created at https://github.com/username/secret-project"
+  
+  - title: "Manual mode (no GitHub CLI)"
+    command: "./launch.sh"
+    working_directory: "/projects/my-project"
+    scenario: "GitHub CLI not installed"
+    expected_behavior: "Provides manual instructions for creating repo"
+
+error_handling:
+  common_errors:
+    - error: "Git is not installed"
+      exit_code: 1
+      solution: "Install Git from https://git-scm.com/downloads"
+    
+    - error: "GitHub CLI not found"
+      exit_code: 0
+      behavior: "Switches to manual mode with instructions"
+    
+    - error: "remote origin already exists"
+      solution: "Run: git remote remove origin, then retry script"
+    
+    - error: "failed to push"
+      solution: "Run: git pull origin main --rebase, then git push -u origin main"
+    
+    - error: "authentication failed"
+      solution: "Run: gh auth login"
+
+security:
+  considerations:
+    - "Script pushes all files in current directory"
+    - "Review .gitignore before running"
+    - "Check for sensitive data (API keys, credentials)"
+    - "Private repos may require GitHub paid plan"
+  
+  permissions_required:
+    - "Read/write access to GitHub account"
+    - "Permission to create repositories"
+
+performance:
+  average_runtime: "30-120 seconds"
+  network_required: true
+  disk_space: "Minimal (~1MB for .git)"
+  
+performance_notes:
+  - "With GitHub CLI: ~30 seconds"
+  - "Manual mode: ~2 minutes (including user actions)"
+  - "Depends on repository size and network speed"
+
+testing:
+  test_scenarios:
+    - "Fresh project with no .git"
+    - "Project with .git already initialized"
+    - "With GitHub CLI authenticated"
+    - "Without GitHub CLI"
+    - "Public repository creation"
+    - "Private repository creation"
+
+maintenance:
+  last_updated: "2025-01-18"
+  status: "stable"
+  breaking_changes: []
+
+documentation:
+  readme: "README.md"
+  external_links:
+    - title: "GitHub CLI Manual"
+      url: "https://cli.github.com/manual/"
+    - title: "Git Documentation"
+      url: "https://git-scm.com/doc"
+
+contributors:
+  - name: "Chris Creates with AI"
+    url: "https://chriscreateswithai.com"
+
+license: "MIT"

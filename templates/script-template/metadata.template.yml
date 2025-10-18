@@ -1,0 +1,161 @@
+name: "[Script Name]"
+version: "1.0.0"
+category: "[category-name]"
+description: "[Brief one-line description]"
+
+platforms:
+  - windows
+  - macos
+  - linux
+
+languages:
+  - powershell
+  - bash
+  # - python  # uncomment if Python version exists
+
+files:
+  powershell: "script.ps1"
+  bash: "script.sh"
+  # python: "script.py"  # uncomment if Python version exists
+  readme: "README.md"
+
+prerequisites:
+  required:
+    - name: "[tool-name]"
+      version: ">= X.Y.Z"
+      check_command: "[tool] --version"
+      install_url: "https://..."
+  optional:
+    - name: "[optional-tool]"
+      version: ">= X.Y.Z"
+      check_command: "[tool] --version"
+      install_url: "https://..."
+      note: "[Why optional]"
+
+ai_usage:
+  when_to_use:
+    - "[Trigger condition 1]"
+    - "[Trigger condition 2]"
+    - "[Trigger condition 3]"
+  
+  when_not_to_use:
+    - "[Scenario where this script shouldn't be used]"
+    - "[Another scenario to avoid]"
+  
+  inputs:
+    - name: "[input_name]"
+      type: "string|integer|boolean|enum"
+      required: true|false
+      source: "[where value comes from]"
+      description: "[What this input is]"
+      # For enum type, add:
+      # values: ["option1", "option2"]
+    
+    - name: "[another_input]"
+      type: "string"
+      required: false
+      default: "[default_value]"
+      description: "[Description]"
+  
+  outputs:
+    - name: "[output_name]"
+      type: "string|integer|object"
+      description: "[What is output]"
+      example: "[Example value]"
+    
+    - name: "exit_code"
+      type: "integer"
+      description: "0 for success, 1 for failure"
+  
+  behavior:
+    idempotent: true|false
+    idempotency_check: "[How script checks if already done]"
+    safe_to_retry: true|false
+    side_effects:
+      - "[Effect 1]"
+      - "[Effect 2]"
+
+estimated_time: "[X minutes|seconds]"
+complexity: "simple|medium|complex"
+
+tags:
+  - tag1
+  - tag2
+  - tag3
+
+related_scripts:
+  before:
+    - category: "[category]"
+      scripts: ["script-name-1", "script-name-2"]
+  after:
+    - category: "[category]"
+      scripts: ["script-name-1"]
+  similar:
+    - category: "[category]"
+      scripts: ["similar-script"]
+
+examples:
+  - title: "[Example scenario 1]"
+    command: "./script.sh --arg value"
+    working_directory: "/path/to/project"
+    interaction:  # Only if script is interactive
+      - prompt: "[Prompt text]"
+        response: "[Expected response]"
+    expected_output: "[What user sees]"
+    
+  - title: "[Example scenario 2]"
+    command: ".\\script.ps1 -Arg Value"
+    working_directory: "C:\\projects\\example"
+    expected_output: "[Output description]"
+
+error_handling:
+  common_errors:
+    - error: "[Error description]"
+      exit_code: 1
+      solution: "[How to fix]"
+    
+    - error: "[Another error]"
+      exit_code: 1
+      behavior: "[What script does]"
+      solution: "[Fix steps]"
+
+security:
+  considerations:
+    - "[Security note 1]"
+    - "[Security note 2]"
+  
+  permissions_required:
+    - "[Permission 1]"
+    - "[Permission 2]"
+
+performance:
+  average_runtime: "[X seconds]"
+  network_required: true|false
+  disk_space: "[Amount needed]"
+  
+performance_notes:
+  - "[Performance note 1]"
+  - "[Performance note 2]"
+
+testing:
+  test_scenarios:
+    - "[Test scenario 1]"
+    - "[Test scenario 2]"
+    - "[Test scenario 3]"
+
+maintenance:
+  last_updated: "YYYY-MM-DD"
+  status: "stable|beta|experimental"
+  breaking_changes: []
+
+documentation:
+  readme: "README.md"
+  external_links:
+    - title: "[Doc title]"
+      url: "https://..."
+
+contributors:
+  - name: "[Your Name]"
+    url: "https://..."
+
+license: "MIT"
