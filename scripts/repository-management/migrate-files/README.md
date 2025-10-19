@@ -2,6 +2,10 @@
 
 **Automated file migration with dry-run safety, progress tracking, and rollback support.**
 
+**Available in two versions:**
+- `migrate-files-safe.ps1` - PowerShell (Windows/macOS/Linux)
+- `migrate-files-safe.sh` - Bash (macOS/Linux)
+
 ---
 
 ## 🎯 Purpose
@@ -12,6 +16,7 @@ Safely migrate scattered files to organized structure during repository reorgani
 - ✅ **Progress tracking** - See what's happening
 - ✅ **Purpose documentation** - Know why files move where
 - ✅ **Error handling** - Graceful failure recovery
+- ✅ **Cross-platform** - PowerShell or Bash
 
 ---
 
@@ -19,16 +24,30 @@ Safely migrate scattered files to organized structure during repository reorgani
 
 ### 1. Preview Migration (Safe)
 
+**PowerShell (Windows/macOS/Linux):**
 ```powershell
 # Shows what will happen without moving anything
 ./migrate-files-safe.ps1
 ```
 
+**Bash (macOS/Linux):**
+```bash
+# Shows what will happen without moving anything
+./migrate-files-safe.sh
+```
+
 ### 2. Execute Migration (After Review)
 
+**PowerShell:**
 ```powershell
 # Actually moves files (creates backup first)
 ./migrate-files-safe.ps1 -DryRun:$false
+```
+
+**Bash:**
+```bash
+# Actually moves files (creates backup first)
+./migrate-files-safe.sh --execute
 ```
 
 ---
