@@ -1,4 +1,21 @@
 #!/bin/bash
+
+# ---
+# id: scr.launch-repo
+# type: script
+# title: Repository Launch Script
+# tags: [git, github, repository, launch, automation]
+# summary: Automated script to initialize git, create GitHub repository, and push initial content for Arsenal projects.
+# runner: bash
+# platforms: [macos, linux]
+# requires: [bash, git, gh]
+# dangerous: true
+# examples:
+#   - "./launch.sh"
+#   - "bash scripts/repository-management/launch-repo/launch.sh"
+# version: 1
+# ---
+
 # Prompt Arsenal - Automated Launch Script (Bash)
 # This script will initialize git, create GitHub repo, and push everything
 
