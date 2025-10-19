@@ -3,7 +3,7 @@
 **Your comprehensive toolkit of AI-friendly automation scripts for common developer workflows**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Scripts](https://img.shields.io/badge/Scripts-15+-blue.svg)]()
+[![Scripts](https://img.shields.io/badge/Scripts-2%20(15%2B%20Planned)-blue.svg)]()
 [![Cross-Platform](https://img.shields.io/badge/Platform-Win%20%7C%20Mac%20%7C%20Linux-green.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -49,39 +49,49 @@ AI Scripts Arsenal provides **ready-to-run automation scripts** that:
 
 ## 📚 Available Scripts
 
-### 🗂️ Repository Management
+### ✅ Available Now (2 Scripts)
+
+#### Repository Management
 - **[launch-repo](./scripts/repository-management/launch-repo/)** - Initialize git, create GitHub repo, push automatically
-- **[fork-sync](./scripts/repository-management/fork-sync/)** - Sync fork with upstream repository
-- **[branch-manager](./scripts/repository-management/branch-manager/)** - Create branches with naming conventions
+  - `launch.sh` - Bash version (macOS/Linux)
+  - `launch.ps1` - PowerShell version (Windows)
 
-### 🏗️ Project Initialization
-- **[react-typescript-tailwind](./scripts/project-initialization/react-typescript-tailwind/)** - Scaffold React + TypeScript + Tailwind project
-- **[python-fastapi](./scripts/project-initialization/python-fastapi/)** - Bootstrap production-ready FastAPI project
-- **[nextjs-starter](./scripts/project-initialization/nextjs-starter/)** - Next.js full-stack starter with TypeScript
-- **[express-typescript](./scripts/project-initialization/express-typescript/)** - Express + TypeScript API boilerplate
+### 🚧 Coming Soon (15+ Planned)
 
-### ✨ Code Quality
-- **[eslint-prettier-setup](./scripts/code-quality/eslint-prettier-setup/)** - Configure ESLint + Prettier + Airbnb style
-- **[pre-commit-hooks](./scripts/code-quality/pre-commit-hooks/)** - Setup automated pre-commit hooks
-- **[test-coverage](./scripts/code-quality/test-coverage/)** - Run tests with coverage reports
-- **[security-audit](./scripts/code-quality/security-audit/)** - Scan for vulnerabilities
+We're actively building a comprehensive script library! Contributions welcome.
 
-### 🚀 Deployment
-- **[docker-build-push](./scripts/deployment/docker-build-push/)** - Build and push Docker images
-- **[vercel-deploy](./scripts/deployment/vercel-deploy/)** - Deploy to Vercel with one command
-- **[netlify-deploy](./scripts/deployment/netlify-deploy/)** - Deploy to Netlify automatically
-- **[aws-deploy](./scripts/deployment/aws-deploy/)** - Deploy to AWS (S3, Lambda, etc.)
+**Planned Categories:**
 
-### 🗄️ Database
-- **[migration-runner](./scripts/database/migration-runner/)** - Run database migrations (Knex, Alembic, etc.)
-- **[backup-restore](./scripts/database/backup-restore/)** - Backup and restore databases
-- **[seed-data](./scripts/database/seed-data/)** - Populate database with seed data
+**🏭️ Project Initialization:**
+- 🚧 React + TypeScript + Tailwind scaffold
+- 🚧 FastAPI production-ready bootstrap
+- 🚧 Next.js full-stack starter
+- 🚧 Express + TypeScript API boilerplate
 
-### 🛠️ Utilities
-- **[newman-api-tester](./scripts/utilities/newman-api-tester/)** - Run API tests with Newman (Postman CLI)
-- **[dependency-updater](./scripts/utilities/dependency-updater/)** - Update all dependencies to latest versions
-- **[log-analyzer](./scripts/utilities/log-analyzer/)** - Parse and analyze log files
-- **[bulk-rename](./scripts/utilities/bulk-rename/)** - Batch rename files with patterns
+**✨ Code Quality:**
+- 🚧 ESLint + Prettier + Airbnb setup
+- 🚧 Pre-commit hooks automation
+- 🚧 Test coverage reporting
+- 🚧 Security audit scanner
+
+**🚀 Deployment:**
+- 🚧 Docker build & push
+- 🚧 Vercel deploy automation
+- 🚧 Netlify deploy automation
+- 🚧 AWS deploy (S3, Lambda)
+
+**🗄️ Database:**
+- 🚧 Migration runner
+- 🚧 Backup & restore
+- 🚧 Seed data loader
+
+**🛠️ Utilities:**
+- 🚧 API testing with Newman
+- 🚧 Dependency updater
+- 🚧 Log analyzer
+- 🚧 Bulk file renamer
+
+**Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md) or [open an issue](https://github.com/ChrisTansey007/ai-scripts-arsenal/issues) to request a script!
 
 ---
 
@@ -275,6 +285,29 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - Bug fixes and improvements
 - Documentation enhancements
 - Real-world usage examples
+
+---
+
+## 🔗 Related Arsenal Projects
+
+**🤖 ai-scripts-arsenal** ⭐ YOU ARE HERE  
+Automation scripts for repository setup and management
+
+**💭 [windsurf-memories-arsenal](https://github.com/ChrisTansey007/windsurf-memories-arsenal)**  
+Project context and standards that Cascade remembers
+
+**⚙️ [ai-rules-arsenal](https://github.com/ChrisTansey007/ai-rules-arsenal)**  
+Framework-specific development rules and patterns
+
+**🔄 [ai-workflows-arsenal](https://github.com/ChrisTansey007/ai-workflows-arsenal)**  
+Multi-step automation workflows for common tasks
+
+**📝 [prompt-arsenal](https://github.com/ChrisTansey007/prompt-arsenal)**  
+Reusable prompts and AI agent configurations
+
+**🔗 [arsenal-integration-hub](https://github.com/ChrisTansey007/arsenal-integration-hub)**  
+Complete examples showing how to use all Arsenal tools together  
+→ **See our scripts in action:** [Setup Script](https://github.com/ChrisTansey007/arsenal-integration-hub/blob/main/scripts/setup-project.sh)
 
 ---
 
