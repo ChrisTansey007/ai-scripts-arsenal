@@ -3,7 +3,7 @@
 **Your comprehensive toolkit of AI-friendly automation scripts for common developer workflows**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Scripts](https://img.shields.io/badge/Scripts-3%20(15%2B%20Planned)-blue.svg)]()
+[![Scripts](https://img.shields.io/badge/Scripts-4%20(15%2B%20Planned)-blue.svg)]()
 [![Cross-Platform](https://img.shields.io/badge/Platform-Win%20%7C%20Mac%20%7C%20Linux-green.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -49,7 +49,7 @@ AI Scripts Arsenal provides **ready-to-run automation scripts** that:
 
 ## 📚 Available Scripts
 
-### ✅ Available Now (3 Scripts)
+### ✅ Available Now (4 Scripts)
 
 #### Repository Management
 - **[launch-repo](./scripts/repository-management/launch-repo/)** - Initialize git, create GitHub repo, push automatically
@@ -57,6 +57,12 @@ AI Scripts Arsenal provides **ready-to-run automation scripts** that:
   - `launch.ps1` - PowerShell version (Windows)
 - **[migrate-files](./scripts/repository-management/migrate-files/)** - Safe file migration with dry-run, backup, and rollback
   - `migrate-files-safe.ps1` - PowerShell version with full safety features
+  - `migrate-files-safe.sh` - Bash version with full safety features
+
+#### Development
+- **[nextjs-start-dev](./scripts/development/nextjs-start-dev/)** - Smart Next.js dev server starter with auto-checks
+  - `start-dev.ps1` - PowerShell version with port management and Node verification
+  - `start-dev.sh` - Bash version with auto-dependency install
 
 ### 🚧 Coming Soon (15+ Planned)
 
