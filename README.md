@@ -49,7 +49,7 @@ AI Scripts Arsenal provides **ready-to-run automation scripts** that:
 
 ## 📚 Available Scripts
 
-### ✅ Available Now (4 Scripts)
+### ✅ Available Now (5 Scripts)
 
 #### Repository Management
 - **[launch-repo](./scripts/repository-management/launch-repo/)** - Initialize git, create GitHub repo, push automatically
@@ -58,6 +58,11 @@ AI Scripts Arsenal provides **ready-to-run automation scripts** that:
 - **[migrate-files](./scripts/repository-management/migrate-files/)** - Safe file migration with dry-run, backup, and rollback
   - `migrate-files-safe.ps1` - PowerShell version with full safety features
   - `migrate-files-safe.sh` - Bash version with full safety features
+
+#### Frontend Development
+- **[react-vite-setup](./scripts/frontend/react-vite-setup/)** - Automated React/Vite project setup with ESM fixes
+  - `setup-react-vite.ps1` - PowerShell version with full validation
+  - `setup-react-vite.sh` - Bash version with backup/rollback
 
 #### Development
 - **[nextjs-start-dev](./scripts/development/nextjs-start-dev/)** - Smart Next.js dev server starter with auto-checks
