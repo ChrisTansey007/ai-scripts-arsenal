@@ -370,3 +370,36 @@ If this helps your workflow:
 **Built with ❤️ for developers and AI agents alike**
 
 **Let's automate all the things!** 🚀
+
+
+---
+
+## 🔗 Arsenal Ecosystem
+
+**This repository is part of the complete Arsenal ecosystem for AI-powered development.**
+
+### Content Repositories
+- **[Windsurf Memories Arsenal](https://github.com/ChrisTansey007/windsurf-memories-arsenal)** - What Cascade remembers
+- **[Prompt Arsenal](https://github.com/ChrisTansey007/prompt-arsenal)** - What to ask/build (26 prompts)
+- **[AI Rules Arsenal](https://github.com/ChrisTansey007/ai-rules-arsenal)** - How Cascade behaves
+- **[AI Workflows Arsenal](https://github.com/ChrisTansey007/ai-workflows-arsenal)** - Multi-step processes
+- **[AI Scripts Arsenal](https://github.com/ChrisTansey007/ai-scripts-arsenal)** - Automation scripts ← YOU ARE HERE
+
+### Integration & Tooling
+- **[Arsenal Integration Hub](https://github.com/ChrisTansey007/arsenal-integration-hub)** - How to use them together
+- **[Arsenal Context Server](https://github.com/ChrisTansey007/arsenal-context-server)** - MCP context delivery
+- **[Arsenal CLI](https://github.com/ChrisTansey007/arsenal-cli)** - Command-line management
+- **[Arsenal MCP Server](https://github.com/ChrisTansey007/arsenal-mcp-server)** - Model Context Protocol server
+
+### 🚀 Get Started
+
+```bash
+# Install complete Arsenal ecosystem
+curl -sSL https://raw.githubusercontent.com/ChrisTansey007/arsenal-integration-hub/main/scripts/install-all.sh | bash
+
+# Or use Arsenal CLI
+npm install -g arsenal-cli
+arsenal install all
+```
+
+**See [Arsenal Integration Hub](https://github.com/ChrisTansey007/arsenal-integration-hub) for complete guides!**
